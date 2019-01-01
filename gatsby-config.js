@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatstrap',
-    description: 'Gatsby starter for bootstrap a blog',
-    siteUrl: 'https://gatstrap.netlify.com',
-    author: 'jaxx2104',
-    twitter: 'jaxx2104',
+    title: 'Bestpet',
+    description: 'Kedi ve Köpekler için ekonomik Mama',
+    siteUrl: 'https://bestpet.com.tr',
+    author: 'Atlaspet A.Ş.',
+    twitter: '',
     adsense: '',
   },
   pathPrefix: '/',
@@ -20,6 +20,13 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/images/`,
+        name: 'images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `static/images/`,
         name: 'images',
       },
     },
@@ -50,10 +57,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
-        description: 'Gatsby starter for bootstrap a blog',
-        homepage_url: 'https://gatstrap.netlify.com',
+        name: 'Bestpet',
+        short_name: 'Bestpet',
+        description: 'Kedi ve Köpekler için kaliteli ve ekonomik mama',
+        homepage_url: 'https://bestpet.com.tr',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',
@@ -98,10 +105,23 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `lgn02sfu9xug`,
+        spaceId: `yawdzgyg7lyy`,
         // Learn about environment variables: https://gatsby.app/env-vars
-        accessToken: '2816d12c732c5ef79931b606b2f648f2d15ff530f80b79669d9f701f9725a798',
+        accessToken: 'f746c878f4f7e98d23162953ac722beda15bf73cd1dd2b276d1d291e5d8be8f9',
         },
     },
+    {
+    resolve: `gatsby-plugin-google-tagmanager`,
+    options: {
+      id: "GTM-WXBB684",
+
+      // Include GTM in development.
+      // Defaults to false meaning GTM will only be loaded in production.
+      includeInDevelopment: false,
+
+      // Specify optional GTM environment details.
+      
+    },
+  },
   ],
 }

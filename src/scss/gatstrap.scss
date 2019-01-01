@@ -10,7 +10,7 @@
 
 // Reassign color vars to semantic color scheme
 $theme-colors: (
-  primary: $purple,
+  primary: #8C2018,
   secondary: $gray-600,
   success: $green,
   info: $cyan,
@@ -683,7 +683,7 @@ strong {
 
 .footer-widget .list li > a::before {
     color: #cccccc;
-    content: "\f18e";
+    //content: "\f18e";
     font-family: FontAwesome;
     margin-right: 5px;
     vertical-align: middle;
@@ -725,7 +725,16 @@ strong {
 .footer-menu li {
     display: inline;
 }
+.footer-menu {
+    background-color:#000000;
+    color: #FFFFFF;
+    font-size: 0.9em;
+}
 
+.footer-menu li Link {
+    color: #FFFFFF;
+    font-size: 0.9em;
+}
 /*******************************
     9 - FOOTER ENDS 
 ********************************/
@@ -765,4 +774,12 @@ strong {
     color: #525252;
 }
 
+.divider-red{
+    background-color:#8C2018;
+    height:0.7px;
+}
+
+.productlist{
+    padding-bottom:100px!important;
+}
 /*---------------- 10.1 -  Back To Top Ends ------------------------ */

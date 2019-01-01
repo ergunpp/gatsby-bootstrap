@@ -14,8 +14,14 @@ import {
   faReact,
   faTwitter,
   faVuejs,
+  
+  
 } from '@fortawesome/free-brands-svg-icons'
 import './style.scss'
+
+import{
+  faBars
+} from '@fortawesome/free-solid-svg-icons'
 
 library.add(
   faApple,
@@ -28,13 +34,14 @@ library.add(
   faPhp,
   faReact,
   faTwitter,
-  faVuejs
+  faVuejs,
+  faBars
 )
 
-const Icon = ({ name }) => (
-  <div className="icon" title={name}>
-    <FontAwesomeIcon icon={['fab', name]} />
-  </div>
+const Icon = ({ name,prefix }) => (
+  
+    <FontAwesomeIcon icon={[prefix, name]} />
+  
 )
 
 export default Icon

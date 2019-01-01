@@ -2,6 +2,7 @@ const each = require('lodash/each')
 const Promise = require('bluebird')
 const path = require('path')
 const PostTemplate = path.resolve('./src/templates/index.js')
+const ProductTemplate =path.resolve('./src/templates/ProductDetail/index.js')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -11,7 +12,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allFile(filter: { extension: { regex: "/md|js/" } }, limit: 1000) {
+            allFile(filter: { extension: { regex: "/md|js|jpg/" } }, limit: 1000) {
               edges {
                 node {
                   id
@@ -24,9 +25,25 @@ exports.createPages = ({ graphql, actions }) => {
                       path
                     }
                   }
+                  childImageSharp{
+                    fluid{
+                      base64
+                    }
+                  }
                 }
               }
             }
+             allContentfulMarka(filter:{name:{eq:"Bestpet"},node_locale:{eq:"tr-TR"}}){
+                edges{
+                  node{
+                   products: _r_nler{
+                          name
+                          id
+          }
+        }
+      }
+     }
+            
           }
         `
       ).then(({ errors, data }) => {
@@ -35,28 +52,26 @@ exports.createPages = ({ graphql, actions }) => {
           reject(errors)
         }
 
-        // Create blog posts & pages.
-        const items = data.allFile.edges
-        const posts = items.filter(({ node }) => /posts/.test(node.name))
-        each(posts, ({ node }) => {
-          if (!node.remark) return
-          const { path } = node.remark.frontmatter
+       
+        
+       const products = data.allContentfulMarka.edges[0].node.products
+       
+        each(products, (index, product ) => {
+          
+          
+          const  path  = `/product-tr/${index.id}`
+          
           createPage({
             path,
-            component: PostTemplate,
+            component: ProductTemplate,
+            context:{
+              productId: index.id
+            },
           })
         })
 
-        const pages = items.filter(({ node }) => /page/.test(node.name))
-        each(pages, ({ node }) => {
-          if (!node.remark) return
-          const { name } = path.parse(node.path)
-          const PageTemplate = path.resolve(node.path)
-          createPage({
-            path: name,
-            component: PageTemplate,
-          })
-        })
+        
+       
       })
     )
   })
