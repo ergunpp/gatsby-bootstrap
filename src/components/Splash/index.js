@@ -10,8 +10,8 @@ export default () => (
      query { 
         file(relativePath:{eq:"splash.jpg"}){
         childImageSharp{
-          fluid{
-           ...GatsbyImageSharpFluid_noBase64
+          fluid(maxWidth:1000){
+           ...GatsbyImageSharpFluid
           }
         }
       }

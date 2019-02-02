@@ -13,7 +13,7 @@ class AnalysisChart extends React.Component {
         values.push(props.analysis.fibre)
         values.push(props.analysis.omega3)
         values.push(props.analysis.omega6)
-        console.log("VALUES::::"+values)
+        
         var total =0
         for (var i in values) { total +=values[i]}
         values.push(1-total)

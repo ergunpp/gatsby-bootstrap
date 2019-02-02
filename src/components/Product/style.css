@@ -65,6 +65,15 @@
   
 }
 
+@media (min-width: 769px) and (max-width:900px) {
+ 
+  .card{
+    display:inline-block;
+    width:35%;
+  }
+  
+}
+
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {

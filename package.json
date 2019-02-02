@@ -37,7 +37,8 @@
     "jquery": "^1.12.4",
     "popper.js": "^1.14.6",
     "react-chartjs-2": "^2.7.4",
-    "react-icons": "^3.2.2"
+    "react-icons": "^3.2.2",
+    "react-string-replace": "^0.4.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.8",

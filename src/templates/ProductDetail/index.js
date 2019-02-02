@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Layout from 'components/Layout'
 import  './style.scss'
 import NutritionAdditives from 'components/NutritionAdditives'
 import AnalysisChart from 'components/AnalysisChart'
 import PackageVariants from 'components/PackageVariants'
+
 
 
 export default class ProductDetail extends React.Component {
@@ -15,7 +17,7 @@ render() {
     return (
       <Layout location={product.id}>
       <div className="container">
-         <div className="row">
+         <div className="row mt-5">
           <div className="col-md-7">
             <h1>{product.name}</h1>
             {product.description !== null && (<div><h3>{product.description.description}</h3></div>)}

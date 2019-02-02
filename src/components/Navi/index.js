@@ -11,7 +11,7 @@ class Navi extends React.Component {
         constructor(props) {
         super(props);
         this.state = {
-          windowWidth: null,
+          windowWidth: 1081,
           mobileNavVisible: false
         };
         }
@@ -22,6 +22,7 @@ class Navi extends React.Component {
 
   componentDidMount() {
     if (typeof window !== 'undefined') {
+      if (window.innerWidth<this.state.windowWidth){this.handleResize()}
     window.addEventListener('resize', this.handleResize.bind(this));
     }
   }

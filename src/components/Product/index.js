@@ -42,13 +42,15 @@ export default (props) =>(
         
          
               (product.isDogFood===props.type && product.category.id ==props.category) && (
-                  <div className="card">
+                  <div key={key} className="card">
                      <div className="card-media">
+                       <Link to={`/product-tr/${product.id}`}>
                          <img className="card-img" src={product.mainPhoto.fixed.src}/>
+                       </Link>
                          <img className="shape" src="/img/shap-small.png"/>
                      </div>
                      <div className="card-caption">
-                        <Link key={key} to={`/product-tr/${product.id}`}>
+                        <Link to={`/product-tr/${product.id}`}>
                             <p className="card-title">{product.name}</p>
                         </Link> 
   

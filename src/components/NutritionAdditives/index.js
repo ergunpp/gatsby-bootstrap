@@ -32,7 +32,7 @@ const NutritionAdditives = (props) =>(
         <div className="bar1"></div>
     
         
-    
+       {props.energy!==null && (
         <div className="line">
             <div className="fr">
                {props.energy}kcal
@@ -42,6 +42,7 @@ const NutritionAdditives = (props) =>(
                 <b>Enerji</b>
             </div>
         </div>
+       )}
     
         <div className="bar2"></div>
     
