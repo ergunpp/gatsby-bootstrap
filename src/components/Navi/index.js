@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Link } from 'gatsby'
 import "./style.scss"
+import "scss/gatstrap.scss"
 import Icon from 'components/Icon'
 
 
@@ -105,18 +106,20 @@ class Navi extends React.Component {
     }
     
   renderNavigation() {
-      if(this.state.windowWidth <= 1080) {
+      if(this.state.windowWidth <= 767) {
         return [
            <nav className="navbar navbar-expand-sm navbar-light flex-md-row white-bg sticky-top bg-light">
-              <div className="container">
+              <div className="container-fluid">
                   <div className="navbar-header">
                     <Link className="navbar-brand" to="/">
                       <img src="/img/main-logo-2.png" style={{height:"50px"}} className="align-center" alt="Bestpet Logo" />
                     </Link>
-                  
-                   <button className="navbar-toggle menu-button" onClick={this.handleNavClick.bind(this)}><span className="menu-icon"><Icon name="bars" prefix="fas"></Icon></span></button>
-                  
                   </div>
+                   <div className="nav navbar navbar-right">
+                   <button className="navbar-toggle menu-button" onClick={this.handleNavClick.bind(this)}><span className="menu-icon
+                   "><Icon name="bars" prefix="fas"></Icon></span></button>
+                  </div>
+                  
                 <div className="navbar navbar-collapse">
                      {this.renderMobileNav()}
                 </div>

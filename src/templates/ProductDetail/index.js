@@ -18,7 +18,7 @@ render() {
       <Layout location={product.id}>
       <div className="container">
          <div className="row mt-5">
-          <div className="col-md-7">
+          <div className="col-md-6">
             <h1>{product.name}</h1>
             {product.description !== null && (<div><h3>{product.description.description}</h3></div>)}
             <img src={product.mainPhoto.fixed.src}/>
@@ -27,7 +27,7 @@ render() {
             <p>{product.ingredients.ingredients}</p>
             
             </div>
-            <div className="dteailSection">
+            <div className="detailSection">
                <h3>Paket Çeşitleri</h3>
                <PackageVariants packages={product.packageVariants}/>
             </div>
@@ -36,7 +36,7 @@ render() {
               <div className="feedingTable" dangerouslySetInnerHTML={{__html:product.feedingTable.feedingTable}}></div>
               </div>
            </div>
-        <div className="col-md-5">
+        <div className="col-md-6">
          
           <div className="chart">
            <div className="title">Analiz</div>
