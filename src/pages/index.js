@@ -1,6 +1,8 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import get from 'lodash/get'
+import Seo from 'components/seo'
+
 
 
 import Meta from 'components/Meta'
@@ -12,7 +14,8 @@ const BlogIndex = ({ data, location }) => {
   
   return (
     <Layout location={location}>
-      <Meta site={get(data, 'site.meta')} />
+      <Seo title="Dört ayakları dostlarımız için bütçe dostu kaliteli mama"/>
+      
       <Splash/>
     </Layout>
   )

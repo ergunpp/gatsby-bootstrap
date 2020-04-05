@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Bestpet',
-    description: 'Kedi ve Köpekler için ekonomik Mama',
+    title: 'Bestpet Kedi ve Köpek mamaları',
+    description: 'Kedi ve Köpekler için bütçe dostu, kaliteli Mama',
     siteUrl: 'https://bestpet.com.tr',
     author: 'Atlaspet A.Ş.',
     twitter: '',

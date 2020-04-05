@@ -70,12 +70,12 @@ class ContactForm extends React.Component {
            contentType: "application/json",
            data: JSON.stringify(data),
            success: function(){
-           	form.setState({name:'',email:'',message:'',subject:'',result:'Form başarıyla gönderildi.',alertType:'alert alert-success'})
-           },
+           	this.setState({name:'',email:'',message:'',subject:'',result:'Form başarıyla gönderildi.',alertType:'alert alert-success'})
+           }.bind(this),
            error: function () {
              // show an error message
-            form.setState({result: 'Sorunlar oluştu. Formu gönderemedik.',alertType:'alert alert-danger'});
-           },
+            this.setState({result: 'Sorunlar oluştu. Formu gönderemedik.',alertType:'alert alert-danger'});
+           }.bind(this),
          });
         } else {console.log("Hi there, I guess you are not human baby");}
     } else { form.setState({result: 'Lütfen girmiş olduğunuz email adresini kontrol ediniz.',alertType:'alert alert-danger'})}
@@ -129,23 +129,23 @@ class ContactForm extends React.Component {
                   	<div >
                   	    <div className="multiple">
                   			<label>İsim</label>
-                  			<input className="form-control"  name="name" type="text" onChange={this.handleChange} />
+                  			<input className="form-control"  name="name" type="text" value={this.state.name} onChange={this.handleChange} />
                   		</div>
                   		<div className="multiple">
                   			<label>Email</label>
-                  			<input className="form-control"  name="email" type="text" onChange={this.handleChange}/>
+                  			<input className="form-control"  name="email" type="text" value={this.state.email} onChange={this.handleChange}/>
                   		</div>
                   	</div>
                   	<div >
                   		<div>
                   			<label>Konu</label>
-                  			<input className="form-control"  name="subject" type="text" onChange={this.handleChange}/>
+                  			<input className="form-control"  name="subject" type="text" value={this.state.subject} onChange={this.handleChange}/>
                   		</div>
                   	</div>
                   	<div >
                   		<div>
                   			<label>Mesajınız</label>
-                  			<input className="form-control"  name="message" type="text" onChange={this.handleChange}/>
+                  			<input className="form-control"  name="message" type="text" value={this.state.message} onChange={this.handleChange}/>
                   		</div>
                   	</div>
                   	<div >

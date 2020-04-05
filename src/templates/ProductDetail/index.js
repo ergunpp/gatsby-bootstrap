@@ -7,6 +7,7 @@ import  './style.scss'
 import NutritionAdditives from 'components/NutritionAdditives'
 import AnalysisChart from 'components/AnalysisChart'
 import PackageVariants from 'components/PackageVariants'
+import Seo from 'components/seo'
 
 
 
@@ -16,12 +17,13 @@ render() {
     
     return (
       <Layout location={product.id}>
+      <Seo title={product.name} description={product.description.description}/>
       <div className="container">
          <div className="row mt-5">
           <div className="col-md-6">
             <h1>{product.name}</h1>
             {product.description !== null && (<div><h3>{product.description.description}</h3></div>)}
-            <img src={product.mainPhoto.fixed.src}/>
+            <img src={product.mainPhoto.fixed.src} alt={product.name}/>
             <div className="detailSection">
             <h3>İçerikler</h3>
             <p>{product.ingredients.ingredients}</p>

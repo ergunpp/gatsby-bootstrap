@@ -28,7 +28,7 @@ const Footer = () => (
                                 <span className="divider-2"></span>
                                 <ul className="list">
                                     <li> <i><FaArrowCircleRight className="footer-icons"/></i><a href="https://prochoice.com.tr"> Prochoice </a> </li>
-                                    <li> <i><FaArrowCircleRight className="footer-icons"/></i><a href="https://chefschoice.com.tr"> Chef's Choice </a> </li>
+                                    <li> <i><FaArrowCircleRight className="footer-icons"/></i><a href="http://chefschoice.com.tr"> Chef's Choice </a> </li>
                                     <li> <i><FaArrowCircleRight className="footer-icons"/></i><a href="https://atlaspet.com.tr"> Brit Care</a> </li>
                                     
                                 </ul>

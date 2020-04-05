@@ -45,7 +45,7 @@ export default (props) =>(
                   <div key={key} className="card">
                      <div className="card-media">
                        <Link to={`/product-tr/${product.id}`}>
-                         <img className="card-img" src={product.mainPhoto.fixed.src}/>
+                         <img className="card-img" src={product.mainPhoto.fixed.src} alt={product.name}/>
                        </Link>
                          <img className="shape" src="/img/shap-small.png"/>
                      </div>

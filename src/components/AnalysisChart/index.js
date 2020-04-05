@@ -42,9 +42,9 @@ class AnalysisChart extends React.Component {
         
         var total =0
         for (var i in values) { total +=values[i]}
-        values.push(1-total)
-        labels.push("Nem")
-        colors.push("#80c5de")
+        //values.push(1-total)
+        //labels.push("nem")
+        //colors.push("#80c5de")
         this.state={
             chartData:{
                 title:{
