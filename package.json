@@ -35,7 +35,7 @@
     "gatsby-source-filesystem": "2.0.8",
     "gatsby-transformer-remark": "2.1.12",
     "gatsby-transformer-sharp": "2.1.8",
-    "jquery": "^1.12.4",
+    "jquery": "^3.5.0",
     "popper.js": "^1.14.6",
     "react-chartjs-2": "^2.7.4",
     "react-icons": "^3.2.2",
